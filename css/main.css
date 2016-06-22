@@ -317,6 +317,20 @@ nav a.demButton:hover {
 		font-size: 10px;
 		display: block;    
 	}
+
+	.key-separator {
+		font-size: 16px;
+		margin-right: 20px;
+	}
+
+	.key {
+		font-size: 16px;
+		margin-right: 20px;
+	}
+
+	.tick {
+		font-size: 16px;
+	}
 }
 
 p {
