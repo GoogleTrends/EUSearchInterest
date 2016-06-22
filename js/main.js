@@ -68,10 +68,18 @@ function chart(csvpath, color) {
 	var z = d3.scale.ordinal()
 		.range(colorrange);
 
+	var sw = $(window).width();
+	var tickSpread = 2;
+	if(sw < 1200) {
+		tickSpread = 3;
+	}
+	if(sw < 700) {
+		tickSpread = 4;
+	}
 	var xAxis = d3.svg.axis()
 		.scale(x)
 		.orient("bottom")
-		.ticks(d3.time.months, 2)
+		.ticks(d3.time.months, tickSpread)
 		.tickFormat(d3.time.format("%b '%y"));
 
 	var yAxis = d3.svg.axis()
@@ -157,7 +165,7 @@ function chart(csvpath, color) {
 							.attr("opacity", 1);
 						});
 					if(i !== Object.keys(row).length - 1) {
-						$('.key-container').append('<span style="color:#999; margin-right: 20px;">&#9676;</span>');
+						$('.key-container').append('<span class="key-separator">&#9676;</span>');
 					}
 				}
 			});

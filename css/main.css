@@ -88,6 +88,7 @@ body {
 .title {
 	color: white;
 	margin-left: 10px;
+	margin-bottom: 7px;
 }
 
 /* ==============
@@ -168,10 +169,44 @@ nav a.demButton:hover {
 	font-weight: 300;
 }
 
+.key {
+	display: inline-block;
+	color: #999;
+	margin-right: 20px;
+	transition: color 0.3s ease-out;
+	cursor: pointer;
+	font-family: "Open Sans";
+}
+
+.key:hover {
+	color: #fff;
+}
+
+.key-hover {
+	color: #fff;
+}
+
+.key-separator {
+	color:#999; 
+	margin-right: 20px;
+}
+
 @media screen and (max-width: 799px) {
 
 	.streamGraph .labels {
 		display: none;
+	}
+
+	.key-separator {
+		display: none;
+	}
+
+	.key {
+		font-size: 12px;
+	}
+
+	.tick {
+		font-size: 10px;
 	}
 }
 
@@ -201,6 +236,20 @@ nav a.demButton:hover {
 	.streamGraph .labels.super-small {
 		display: none;
 	}
+
+	.key-separator {
+		font-size: 12px;
+		margin-right: 8px;
+	}
+
+	.key {
+		font-size: 12px;
+		margin-right: 8px;
+	}
+
+	.tick {
+		font-size: 12px;
+	}
 }
 
 @media screen and (min-width: 1240px) {
@@ -227,6 +276,18 @@ nav a.demButton:hover {
 
 	.streamGraph .labels.super-small {
 		display: none;
+	}
+
+	.key-separator {
+		font-size: 14px;
+	}
+
+	.key {
+		font-size: 14px;
+	}
+
+	.tick {
+		font-size: 14px;
 	}
 }
 
@@ -308,25 +369,16 @@ button {
 	color:#aeff77;
 }
 
-.key {
-	display: inline-block;
-	color: #999;
-	margin-right: 20px;
-	transition: color 0.3s ease-out;
-	cursor: pointer;
-}
-
-.key:hover {
-	color: #fff;
-}
-
-.key-hover {
-	color: #fff;
-}
-
 h1 {
 	font-size: 1.5em;
 	font-weight: 300;
+	font-family: "Open Sans";
+}
+
+.instructions {
+	clear: left;
+	margin-left: 10px;
+	color: #ccc;
 	font-family: "Open Sans";
 }
 
