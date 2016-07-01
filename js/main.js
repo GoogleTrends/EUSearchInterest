@@ -13,7 +13,7 @@ function drawChartForSelected() {
 	else {
 		color = "blue";
 	}
-	chart("data/eu-questions-2013-2016.csv", 'blue');
+	chart("data/eu-questions-2013-2016-06-30-2016.csv", 'blue');
 }
 
 
